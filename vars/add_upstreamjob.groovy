@@ -2,7 +2,7 @@
 def call(upstreamJob){
    def insertTrigger=", pipelineTriggers([upstream(threshold: \'SUCCESS\', upstreamProjects: \'$upstreamJob/\' + URLEncoder.encode(\"\$branchName\", \"UTF-8\"))])"
    def appendTrigger="upstream(threshold: \'SUCCESS\', upstreamProjects: \'$upstreamJob/\' + URLEncoder.encode(\"\$branchName\", \"UTF-8\"))"
-   File fh = new File("${workspace}/test_jenkinsfile")
+   File fh = new File('Jenkinsfile')
    def linenum=0
    def lineToReplace
    def insert_new=0
