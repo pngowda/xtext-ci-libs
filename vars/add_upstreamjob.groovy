@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def call(upstreamJob){
-   def insertTrigger=", pipelineTriggers([upstream(threshold: \'SUCCESS\', upstreamProjects: \'$upstreamJob/\' + URLEncoder.encode(\"\$branchName\", \"UTF-8\"))])"
-   def appendTrigger="upstream(threshold: \'SUCCESS\', upstreamProjects: \'$upstreamJob/\' + URLEncoder.encode(\"\$branchName\", \"UTF-8\"))"
+   def insertTrigger=", pipelineTriggers([upstream(threshold: \'SUCCESS\', upstreamProjects: \'$upstreamJob/\' + URLEncoder.encode(\"\$BRANCH_NAME\", \"UTF-8\"))])"
+   def appendTrigger="upstream(threshold: \'SUCCESS\', upstreamProjects: \'$upstreamJob/\' + URLEncoder.encode(\"\$BRANCH_NAME\", \"UTF-8\"))"
    File fh = new File('Jenkinsfile')
    def linenum=0
    def lineToReplace
