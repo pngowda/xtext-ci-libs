@@ -12,7 +12,7 @@ def call(body) {
 
  
 
-    echo params.someParam
+    echo params.type
 
 }
 
