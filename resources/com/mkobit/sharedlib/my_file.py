@@ -1,4 +1,4 @@
 #!/usr/bin/env python
-import example as ex
+import example
 print("Hello")
-ex.add(4,5.5)
+print example.add(4,5.5)
