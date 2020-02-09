@@ -1,4 +1,4 @@
 #!/usr/bin/env python
-import module.example
+import com.mkobit.sharedlib.module.example as ex
 print("Hello")
-example.add(4,5.5)
+ex.add(4,5.5)
